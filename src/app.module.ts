@@ -6,6 +6,7 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { CouplesModule } from './couples/couples.module';
+import { ChatModule } from './chat/chat.module';
 //File to config database
 @Module({
   imports: [ConfigModule.forRoot({isGlobal: true,}),
@@ -22,7 +23,8 @@ import { CouplesModule } from './couples/couples.module';
   }),
   AuthModule,
   UsersModule,
-  CouplesModule],
+  CouplesModule,
+  ChatModule],
   controllers: [AppController],
   providers: [AppService],
 })
